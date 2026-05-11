@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), 0 2px 12px rgba(0, 0, 0, 0.06);
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ── Logo ── */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #22c55e;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.35);
+}
+
+.navbar__logo-text {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
+}
+
+.navbar__logo-text em {
+  font-style: normal;
+  color: #22c55e;
+}
+
+/* ── Links ── */
+.navbar__nav {
+  margin-left: auto;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #374151;
+  transition: color 0.18s ease, background 0.18s ease;
+  letter-spacing: 0.01em;
+}
+
+.navbar__link:hover {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.08);
+}
+
+/* ── Burger (móvil) ── */
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: auto;
+}
+
+.navbar__burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #374151;
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .navbar__nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar__nav.is-open {
+    display: block;
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .navbar__link {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar__burger {
+    display: flex;
+  }
+}
