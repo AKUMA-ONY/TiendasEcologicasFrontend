@@ -1,20 +1,20 @@
 ---
 import Navbar from '../components/Navbar.astro';
-import TarjetadeVisita from '../components/TarjetadeVisita.astro';
-
 ---
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Tiendas Ecológicas Limpio</title>
+        <title>Tiendas Ecológicas Limpio</title>
+        <style>
+            body{
+                margin: 0px;
+            }
+        </style>
     </head>
     <body class="">
         <Navbar />
-
-        <main>
-            <TarjetadeVisita />
-        </main>
+            <slot />
     </body>
 </html>
